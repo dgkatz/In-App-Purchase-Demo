@@ -14,6 +14,8 @@
 		222CCBA11E9054FF00D10C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222CCB9F1E9054FF00D10C39 /* LaunchScreen.storyboard */; };
 		222CCBAC1E9054FF00D10C39 /* In_App_Purchase_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CCBAB1E9054FF00D10C39 /* In_App_Purchase_DemoTests.swift */; };
 		222CCBB71E9054FF00D10C39 /* In_App_Purchase_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CCBB61E9054FF00D10C39 /* In_App_Purchase_DemoUITests.swift */; };
+		22A6243A1E9AA6AC001F4A27 /* purchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A624391E9AA6AC001F4A27 /* purchaseViewController.swift */; };
+		22A6243D1E9AA6F4001F4A27 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A6243C1E9AA6F4001F4A27 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		222CCBB21E9054FF00D10C39 /* In-App Purchase DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "In-App Purchase DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		222CCBB61E9054FF00D10C39 /* In_App_Purchase_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In_App_Purchase_DemoUITests.swift; sourceTree = "<group>"; };
 		222CCBB81E9054FF00D10C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A624391E9AA6AC001F4A27 /* purchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = purchaseViewController.swift; sourceTree = "<group>"; };
+		22A6243C1E9AA6F4001F4A27 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A6243D1E9AA6F4001F4A27 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				222CCBAA1E9054FF00D10C39 /* In-App Purchase DemoTests */,
 				222CCBB51E9054FF00D10C39 /* In-App Purchase DemoUITests */,
 				222CCB941E9054FF00D10C39 /* Products */,
+				22A6243B1E9AA6F4001F4A27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +105,7 @@
 			children = (
 				222CCB961E9054FF00D10C39 /* AppDelegate.swift */,
 				222CCB981E9054FF00D10C39 /* ViewController.swift */,
+				22A624391E9AA6AC001F4A27 /* purchaseViewController.swift */,
 				222CCB9A1E9054FF00D10C39 /* Main.storyboard */,
 				222CCB9D1E9054FF00D10C39 /* Assets.xcassets */,
 				222CCB9F1E9054FF00D10C39 /* LaunchScreen.storyboard */,
@@ -123,6 +130,14 @@
 				222CCBB81E9054FF00D10C39 /* Info.plist */,
 			);
 			path = "In-App Purchase DemoUITests";
+			sourceTree = "<group>";
+		};
+		22A6243B1E9AA6F4001F4A27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22A6243C1E9AA6F4001F4A27 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +208,12 @@
 				TargetAttributes = {
 					222CCB921E9054FF00D10C39 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = MGV53A6K23;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					222CCBA61E9054FF00D10C39 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -262,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A6243A1E9AA6AC001F4A27 /* purchaseViewController.swift in Sources */,
 				222CCB991E9054FF00D10C39 /* ViewController.swift in Sources */,
 				222CCB971E9054FF00D10C39 /* AppDelegate.swift in Sources */,
 			);
@@ -415,7 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MGV53A6K23;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "In-App Purchase Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "keiretsuv.In-App-Purchase-Demo";
@@ -428,7 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MGV53A6K23;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "In-App Purchase Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "keiretsuv.In-App-Purchase-Demo";
@@ -514,6 +534,7 @@
 				222CCBBD1E9054FF00D10C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		222CCBBE1E9054FF00D10C39 /* Build configuration list for PBXNativeTarget "In-App Purchase DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +543,7 @@
 				222CCBC01E9054FF00D10C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		222CCBC11E9054FF00D10C39 /* Build configuration list for PBXNativeTarget "In-App Purchase DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +552,7 @@
 				222CCBC31E9054FF00D10C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
